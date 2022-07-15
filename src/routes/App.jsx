@@ -1,17 +1,22 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Layout from '../containers/Layout';
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Layout from "../containers/Layout";
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+import '@styles/global.css'
+
 
 const App = () => {
   return (
     <BrowserRouter>
-    <Layout>
-      <Switch>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </Layout>
+    </BrowserRouter>
+  );
+};
 
-      </Switch>
-    </Layout>
-  </BrowserRouter>
-  )
-}
-
-export default App
+export default App;
