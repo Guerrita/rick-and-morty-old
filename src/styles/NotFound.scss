@@ -1,6 +1,7 @@
 @import 'vars';
 
 section{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,12 +9,25 @@ section{
   box-sizing: border-box;
   width: 100%;
   background-color: var(--morty-blue);
+  
+}
+
+section img {
+  position: absolute;
+  width: 500px;
+  z-index: 1;
+
+  animation-name:rotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 h1 {
   font-size: 132px;
   text-align: center;
-  
+  position: relative;
+  z-index: 2;
 }
 
 .not-found-morty, .not-found-summer {
@@ -31,4 +45,11 @@ h1 {
 
 .not-found-summer {
   background-image: url('../assets/summer-scream.png');
+}
+
+@keyframes rotate{
+
+  100%{
+    transform:rotate(360deg);
+  }
 }
