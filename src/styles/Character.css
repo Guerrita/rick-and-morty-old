@@ -1,0 +1,96 @@
+@import "_vars";
+
+.character--card {
+  width: 280px;
+  height: 540px;
+  background-color: var(--black);
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.character--image img {
+  width: 280px;
+  height: auto;
+  border-radius: 15px 15px 0 0;
+}
+
+.character--information {
+  padding: 20px 30px;
+  height: 260px;
+  position: relative;
+}
+
+.character--name {
+  font-size: 2.4rem;
+  color: var(--morty-blue);
+}
+
+.character--status {
+  font-size: 1.4rem;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.character--status-alive {
+  background-color: var(--green-rick);
+}
+
+.character--status-dead {
+  background-color: red;
+}
+
+.character--status-unknown {
+  background-color: white;
+}
+
+.line {
+  height: 1px;
+  background: white;
+  margin: 15px 0;
+}
+
+.character-detail--information {
+  width: 100%;
+  gap: 20px;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.character--last-location{
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: var(--green-rick);
+}
+
+.character--portal{
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  bottom: 10px;
+
+  animation-name:rotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.character--portal:hover{
+  cursor: pointer;
+}
+
+@keyframes rotate{
+
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+
+@media (max-width: 320px) {
+  .character--card {
+    max-width: 300px;
+    flex-direction: column;
+  }
+}

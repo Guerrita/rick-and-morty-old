@@ -9,9 +9,22 @@ nav {
 	top: 0;
 	background-color: var(--black);
 	height: 70px;
-  
+  z-index: 2;
 }
 
+nav>a{
+	display: flex;
+	align-items: center;
+}
+
+.logo-mini{
+	display: none;
+}
+
+.logo{
+  width: 200px;
+	height: 60px;
+}
 
 .navbar-right{
 	list-style: none;
@@ -25,7 +38,8 @@ nav {
 }
 
 .navbar-right li:hover{
-	border: 2px solid var(--green-rick);
+	transform: scale(1.2);
+	transition: transform 330ms ease-in-out;
 }
 
 .navbar-right li{
@@ -44,7 +58,17 @@ nav {
 
 }
 
-.logo{
-  width: 200px;
-  height: auto;
+@media (max-width: 767px) {
+	.navbar-right{
+		display: none;
+	}
+	.logo{
+		display: none;
+	}
+
+	.logo-mini{
+		display: block;
+		height: 60px;
+	}
+
 }
