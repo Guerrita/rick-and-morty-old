@@ -1,6 +1,6 @@
 @import 'vars';
 
-section{
+not-found-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@ section{
   background-color: var(--morty-blue);
 }
 
-h1 {
+not-found-title {
   font-size: 132px;
   text-align: center;
   

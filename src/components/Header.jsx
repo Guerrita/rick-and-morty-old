@@ -1,23 +1,23 @@
 import React, { useState, useContext } from "react";
-import "@styles/Header.scss";
-import banner from "../assets/Rick-And-Morty-Transparent-Background.png"
+import "@styles/Header.css";
 import logo from "../assets/Rick-And-Morty-Transparent-Images.png"
+import { Link, Navigate, NavLink } from 'react-router-dom'
 
 
 const Header = () => {
   return (
     <nav>
-      <img src= {logo} alt="logo" className="logo" />
+      <NavLink to={'/'}><img src= {logo} alt="logo" className="logo" /></NavLink>
       <div className="navbar-left">
         <ul className="navbar-right">
           <li>
-            <a href="/">Characters</a>
+            <NavLink to="/characters">Characters</NavLink>
           </li>
           <li>
-            <a href="/">Locations</a>
+            <NavLink to="/locations">Locations</NavLink>
           </li>
           <li>
-            <a href="/">Episodes</a>
+            <NavLink to="/episodes">Episodes</NavLink>
           </li>
         </ul>
       </div>
