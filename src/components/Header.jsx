@@ -1,26 +1,31 @@
-import React, { useState, useContext } from "react";
-import "@styles/Header.scss";
-import banner from "../assets/Rick-And-Morty-Transparent-Background.png"
-import logo from "../assets/Rick-And-Morty-Transparent-Images.png"
-
+import "@styles/Header.css";
+import logo from "../assets/Rick-And-Morty-Transparent-Images.png";
+import logoMini from "../assets/logo-mini.png";
+import { NavLink } from "react-router-dom";
+import React from "react";
 
 const Header = () => {
   return (
     <nav>
-      <img src= {logo} alt="logo" className="logo" />
-      <div className="navbar-left">
+      <div>
+        <NavLink to={"/"}>
+          <img src={logoMini} alt="logo" className="logo-mini" />
+        </NavLink>
+        <NavLink to={"/"}>
+          <img src={logo} alt="logo" className="logo" />
+        </NavLink>
+      </div>
         <ul className="navbar-right">
           <li>
-            <a href="/">Characters</a>
+            <NavLink to="/characters">Characters</NavLink>
           </li>
           <li>
-            <a href="/">Locations</a>
+            <NavLink to="/locations">Locations</NavLink>
           </li>
           <li>
-            <a href="/">Episodes</a>
+            <NavLink to="/episodes">Episodes</NavLink>
           </li>
         </ul>
-      </div>
     </nav>
   );
 };

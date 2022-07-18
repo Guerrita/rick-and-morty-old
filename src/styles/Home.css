@@ -1,0 +1,10 @@
+@import "vars";
+
+.banner {
+  display: flex;
+}
+
+.banner img {
+  height: 500px;
+  margin: auto;
+}
