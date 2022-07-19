@@ -1,16 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import banner from '@assets/banner.png'
 import ItemList from '../containers/ItemList';
-const API = 'https://rickandmortyapi.com/api/location/'
+import useGetItems from "../Hooks/useGetItem";
+import Character from "@components/Character";
 
 
 const Locations = () => {
+  const [page, setpage] = useState(1);
+  const API = `https://rickandmortyapi.com/api/location/?page=${page}`;
+  const allItems = useGetItems(API);
+  const { results } = allItems;
+  console.log(results)
   return (
     <section>
     <figure>
       <img src={banner}/>
     </figure>
-    <ItemList API = {API} reference ={'location'}/>
+    <ItemList >
+      {/* {results?.map(character => (
+          <Character character = {character} key= {character.id}/>
+        ))} */}
+      </ItemList>
     </section>
   )
 }

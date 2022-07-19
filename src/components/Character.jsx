@@ -13,7 +13,7 @@ const Item = ({ character, reference }) => {
         <p className={`character--status ${character.status==='Alive' && 'character--status-alive'} ${character.status=='Dead' && 'character--status-dead'} ${character.status=='unknown' && 'character--status-unknown'}`}>
           {character.status}
         </p>
-        <div class="line"></div>
+        <div className="line"></div>
         <div className="character-detail--information">
           <p className="character--gender">{character.species} {character.gender}</p>
           <p className="character--last-location">Last known location</p>
