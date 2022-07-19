@@ -1,6 +1,11 @@
 @import 'vars';
 
+<<<<<<< HEAD:src/styles/NotFound.scss
+section{
+  position: relative;
+=======
 not-found-container{
+>>>>>>> ea1ef3086d58b6c5e3bc2af7d435fc0d32871866:src/styles/NotFound.css
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,12 +13,25 @@ not-found-container{
   box-sizing: border-box;
   width: 100%;
   background-color: var(--morty-blue);
+  
+}
+
+section img {
+  position: absolute;
+  width: 500px;
+  z-index: 1;
+
+  animation-name:rotate;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 not-found-title {
   font-size: 132px;
   text-align: center;
-  
+  position: relative;
+  z-index: 2;
 }
 
 .not-found-morty, .not-found-summer {
@@ -31,4 +49,11 @@ not-found-title {
 
 .not-found-summer {
   background-image: url('../assets/summer-scream.png');
+}
+
+@keyframes rotate{
+
+  100%{
+    transform:rotate(360deg);
+  }
 }
