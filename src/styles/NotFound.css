@@ -1,12 +1,8 @@
 @import 'vars';
 
-<<<<<<< HEAD:src/styles/NotFound.scss
-section{
-  position: relative;
-=======
-not-found-container{
->>>>>>> ea1ef3086d58b6c5e3bc2af7d435fc0d32871866:src/styles/NotFound.css
+.not-found-container{
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 70px);
@@ -16,31 +12,34 @@ not-found-container{
   
 }
 
-section img {
+.not-found-container img{
   position: absolute;
-  width: 500px;
+  width: 400px;
   z-index: 1;
-
   animation-name:rotate;
   animation-duration: 30s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-not-found-title {
+.not-found-title {
   font-size: 132px;
   text-align: center;
   position: relative;
   z-index: 2;
 }
 
-.not-found-morty, .not-found-summer {
+.not-found-morty, .not-found-summer, .not-found-rick {
   display: inline-block;
   width: 108px;
   height: 108px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.not-found-rick{
+  background-image: url('../assets/rick-face.png');
 }
 
 .not-found-morty{
@@ -52,7 +51,6 @@ not-found-title {
 }
 
 @keyframes rotate{
-
   100%{
     transform:rotate(360deg);
   }

@@ -10,7 +10,7 @@ const Locations = () => {
   const API = `https://rickandmortyapi.com/api/location/?page=${page}`;
   const allItems = useGetItems(API);
   const { results } = allItems;
-  console.log(results)
+  console.log(results.residents)
   return (
     <section>
     <figure>
