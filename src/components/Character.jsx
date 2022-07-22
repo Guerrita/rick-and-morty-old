@@ -2,7 +2,7 @@ import React from "react";
 import "@styles/Character.css";
 import portal from '@assets/portal.png'
 
-const Item = ({ character, reference }) => {
+const Character = ({ character }) => {
   return (
     <article className="character--card">
       <figure className="character--image">
@@ -25,4 +25,4 @@ const Item = ({ character, reference }) => {
   );
 };
 
-export default Item;
+export {Character};

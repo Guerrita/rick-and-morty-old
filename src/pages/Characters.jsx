@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import ItemList from "@containers/ItemList";
 import banner from "@assets/banner.png";
 import useGetItems from "../Hooks/useGetItem";
-import Character from "@components/Character";
+import {Character} from "@components/Character";
 
 
 
@@ -17,9 +17,7 @@ const Characters = () => {
 
   return (
     <section>
-      <figure>
-        <img src={banner} />
-      </figure>
+        <img className="characters-banner" src={banner} />
       <ItemList >
       {results?.map(character => (
           <Character character = {character} key= {character.id}/>
