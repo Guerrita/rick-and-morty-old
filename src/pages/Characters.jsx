@@ -8,18 +8,13 @@ import Character from "@components/Character";
 
 const Characters = () => {
   let [pageNumber, updatePageNumber] = useState(1);  
-  let [fetchedData, updateFetchedData] = useState([]);
-  let { info, results } = fetchedData;
+
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
+  let allItems = useGetItems(api)
+    let [fetchedData, updateFetchedData] = useState([]);
+  let { info, results } = allItems;
 
-
-  useEffect(() => {
-    (async function () {
-      let data = await fetch(api).then((res) => res.json());
-      updateFetchedData(data);
-    })();
-  }, [api]);
   return (
     <section>
       <figure>

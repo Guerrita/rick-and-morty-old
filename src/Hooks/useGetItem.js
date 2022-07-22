@@ -7,7 +7,7 @@ const useGetItems = (API) => {
 	useEffect(async () => {
 		const response = await axios(API);
 		setItems(response.data);
-	}, [])
+	}, [API])
 
   return items
 }
